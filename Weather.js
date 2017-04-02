@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   $.getJSON(apiURL, function(weather) {
     console.log(weather);
-    $("#weather").html("latitude:" + weather.coord.lat + "longitude:" + weather.coord.lon);
+    $("#weather").html("latitude: " + weather.coord.lat + " longitude: " + weather.coord.lon);
   });
 
   function getLocation() {
