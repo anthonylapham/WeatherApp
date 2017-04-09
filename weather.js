@@ -3,13 +3,29 @@ $(document).ready(function() {
 
   $.getJSON(apiURL, function(weather) {
     console.log(weather);
-    $("#weather").html("latitude: " + weather.coord.lat + " longitude: " + weather.coord.lon);
+    $("#geo").html("latitude: " + weather.coord.lat + " longitude: " + weather.coord.lon);
+    $("#weather").html(weather.weather.description);
+    $("#temp").html(weather.main.temp);
+    $("#city").html(weather.name);
+
   });
+
+  $.getJSON(apiURL, function(degree){
+    console.log(degree);
+    var kelvin = degree.main.temp;
+    var c = kelvin-273;
+    console.log(c);
+    var f = (kelvin-273.15)*(9/5)+32;
+    console.log(f);
+  })
 
   function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(location){
-          $("#weather").html("latitude:" + location.coord.lat + "longitude:" + location.coord.lon);
+        $("#geo").html("latitude: " + geo.coord.lat + " longitude: " + geo.coord.lon);
+        $("#weather").html(weather.weather.description);
+        $("#temp").html(weather.main.temp);
+        $("#city").html(weather.name);
         })
       }
     }
