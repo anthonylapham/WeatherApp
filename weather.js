@@ -13,7 +13,7 @@ $(document).ready(function() {
   $.getJSON(apiURL, function(degree){
     console.log(degree);
     var kelvin = degree.main.temp;
-    var c = kelvin-273;
+    var c = kelvin-273.15;
     console.log(c);
     var f = (kelvin-273.15)*(9/5)+32;
     console.log(f);
