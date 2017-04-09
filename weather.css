@@ -18,12 +18,6 @@ html *,
 html *:before,
 html *:after { box-sizing: inherit; }
 
-
-
-
-
-
-
 .icon {
   position: relative;
   display: inline-block;
@@ -74,8 +68,6 @@ html *:after { box-sizing: inherit; }
   animation: cloud 4s linear infinite;
 }
 .cloud:nth-child(2):after { background: #fff; }
-
-
 
 /* Animations */
 
