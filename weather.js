@@ -7,11 +7,7 @@ $(document).ready(function() {
       document.getElementById('geo').innerHTML = "latitude: " + data.current_observation.display_location.latitude + " longitude: " + data.current_observation.display_location.longitude;
       document.getElementById('temp').innerHTML = data.current_observation.temperature_string;
       document.getElementById('city').innerHTML = data.current_observation.display_location.city;
-      var kelvin = data.main.temp;
-      var c = kelvin-273;
-      console.log(c);
-      var f = (kelvin-273.15)*(9/5)+32;
-      console.log(f);
+      document.getElementById('icon').innerHTML = data.current_observation.icon_url;
   });
 
 });
