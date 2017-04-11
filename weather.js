@@ -7,7 +7,7 @@ $(document).ready(function() {
       document.getElementById('geo').innerHTML = "latitude: " + data.current_observation.display_location.latitude + " longitude: " + data.current_observation.display_location.longitude;
       document.getElementById('temp').innerHTML = data.current_observation.temperature_string;
       document.getElementById('city').innerHTML = data.current_observation.display_location.city;
-      document.getElementById('icon').innerHTML = data.current_observation.icon_url;
+      document.getElementById('icon').src= data.current_observation.icon_url;
   });
 
 });
